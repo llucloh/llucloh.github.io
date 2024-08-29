@@ -10,7 +10,7 @@ tags: [CTF,Walkthrough, DockerLabs, Rustscan, Feroxbuster, SQL Injection, Burp S
 Hoy nos encontramos con una máquina interesante ya que toca SQL Injection, así que veamos como se resuelve.
 
 
-Comenzamos esta CTF creada por **maciiii___** con la metodología ya vista en anteriores _Write-ups_, usando [Rustscan](https://github.com/RustScan/RustScan) como herramienta de escaneo de puertos.
+Comenzamos esta CTF creada por maciiii___ con la metodología ya vista en anteriores Write-ups, usando [Rustscan](https://github.com/RustScan/RustScan) como herramienta de escaneo de puertos.
 ```bash
 ┌──(kali㉿kali)-[~/…/DockerLabs/Facil/9-ShowTime/deploy]
 └─$ rustscan -a 172.17.0.3 -- -sCV
