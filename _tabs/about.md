@@ -14,8 +14,8 @@ Tengo __21 años__ y empecé en serio con el tema informático desde los 17. Sie
 
 
 
-Actualmente, me estoy adentrando más y más con el __Hacking Ético__ y teniendo una clara decantación por el **Red Teamming**, así que todavía soy un principiante con un entusiasmo de seguir avanzando gigante!
-Mi objetivo principal es documentar mi progreso con las CTF de diferentes páginas web, herramientas que desarrolle y demás artículos que sean interesantes. Mi correo profesional es __ll.lucas.lohe@gmail.com__
+Actualmente, me estoy adentrando más y más con el __Hacking Ético__ y teniendo una clara decantación por el **Red Teamming**, así que todavía soy un principiante con un entusiasmo gigante de seguir avanzando!
+Mi objetivo principal es documentar mi progreso con las CTF de diferentes páginas web, posibles herramientas que desarrolle y demás artículos que sean interesantes. Mi correo profesional es __ll.lucas.lohe@gmail.com__
  por si desean contactar conmigo.
  
 <img src="/assets/favicons/hck.gif" alt="GIF" align="center">
