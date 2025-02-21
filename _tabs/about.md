@@ -9,7 +9,7 @@ order: 4
 
 # ¿Quién soy?
 ¡Hola muy buenas! Yo soy __llucloh__ y soy un estudiante de grado superior en *Redes y Ciberseguridad* (*ASIR*) y Técnico en *Sistemas Microinformáticos y Redes* (*SMR*). 
-Tengo __20 años__ y empecé en serio con el tema informático desde los 17. Siendo pequeño siempre tuve una conexión
+Tengo __21 años__ y empecé en serio con el tema informático desde los 17. Siendo pequeño siempre tuve una conexión
  especial con la tecnología y los móviles, pero nunca le había dedicado tiempo a toquetear un PC. Apenas cuando entré a __SMR__ fue cuando me puse manos a la obra con este mundo, y a pesar de haber comenzado tarde, considero que __aprendo de manera veloz y precisa__.
 
 
