@@ -9,7 +9,7 @@ tags: [CTF,Walkthrough, DockerLabs, john, zip2john, stegseek, BurpSuite, wfuzz, 
 <!-- ```bash
      ```        -->
 
-![Rutas](/assets/post_img/Rutas/logo.png)
+![Dockerlabs](/assets/post_img/Rutas/logo.png)
 
 **Primera máquina que subo en mucho tiempo y de dificultad media! Vamos a ver que nos depara esta CTF...** 
 
@@ -572,6 +572,9 @@ bash-5.2# whoami
 root
 ```
 ¡Hemos completado la máquina! Ha sido muy interesante ir resolviendo esta CTF poco a poco y aunque sea poco realista, considero que va muy bien para tener en cuenta que hay una infinidad de vectores de ataque que aprender. 
+
+![Dockerlabs](/assets/post_img/Rutas/ctf.png)
+
 
 Hasta la próxima,
 
