@@ -1,5 +1,5 @@
 ---
-title : "Obsession CTF Walkthrough"
+title : "Obsession CTF Walkthrough by loh"
 date: 2024-08-14 21:26:42 +0200
 categories: [CTF Walkthrough]
 tags: [CTF,Walkthrough, DockerLabs, FTP, Hydra, SUID, sudo -l]
