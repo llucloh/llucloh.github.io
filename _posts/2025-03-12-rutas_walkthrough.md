@@ -1,5 +1,5 @@
 ---
-title : "Rutas CTF Walkthrough"
+title : "Rutas CTF Walkthrough by loh"
 date: 2025-03-12 10:43:55 +0200
 categories: [CTF Walkthrough]
 tags: [CTF,Walkthrough, DockerLabs, john, zip2john, stegseek, BurpSuite, wfuzz, RFI, Reverse Shell, Path Hijacking, MOTD, SUID, sudo -l]
