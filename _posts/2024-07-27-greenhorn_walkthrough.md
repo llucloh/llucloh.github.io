@@ -1,5 +1,5 @@
 ---
-title : "GreenHorn CTF Walkthrough"
+title : "GreenHorn CTF Walkthrough by loh"
 date: 2024-07-29 02:42:42 +0200
 categories: [CTF Walkthrough]
 tags: [CTF,Walkthrough, Hack The Box, Pluck 4.7.18, Hash Crack, Depix]
