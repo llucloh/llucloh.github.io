@@ -233,11 +233,11 @@ Al acceder al servicio interno del puerto 9000 mediante SSRF, observamos un form
 Después de diferentes pruebas, decidimos realizar una inyección de plantilla mediante un Sniper attack, con la wordlist de [PayloadAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Template%20Injection/Intruder/ssti.fuzz):
 ![SniperAttack](/assets/post_img/Express/8-sniperattack.png)
 
-Usando la inyección básica `{{7*'7'}}` , la respuesta del servidor es `7777777`, confirmando una **vulnerabilidad SSTI en Jinja2 sin sandbox**.
+Usando la inyección básica **{{7*'7'}}** , la respuesta del servidor es **7777777**, confirmando una **vulnerabilidad SSTI en Jinja2 sin sandbox**.
 
 ![Jinja2](/assets/post_img/Express/9a-jinja2.png)
 
-Dado que el motor de plantillas evalúa expresiones Python sin restricciones, es posible acceder a `builtins`, importar módulos y ejecutar comandos del sistema. Utilizamos el siguiente payload: `{{self.__init__.__globals__.__builtins__.__import__('os').popen('id').read() }}`. La salida confirma **ejecución remota de comandos con privilegios de root**.
+Dado que el motor de plantillas evalúa expresiones Python sin restricciones, es posible acceder a `builtins`, importar módulos y ejecutar comandos del sistema. Utilizamos el siguiente payload: **{{self.__init__.__globals__.__builtins__.__import__('os').popen('id').read() }}**. La salida confirma **ejecución remota de comandos con privilegios de root**.
 ![RCEid](/assets/post_img/Express/9b-rceid.png)
 
 Finalmente, aprovechamos el RCE para enviarnos una **reverse shell** utilizando herramientas disponibles en el sistema (busybox). Tras establecer la conexión, confirmamos acceso como **root** y procedemos a leer la **flag final**, completando con éxito el compromiso de la máquina.
