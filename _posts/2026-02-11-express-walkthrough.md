@@ -244,7 +244,7 @@ Finalmente, aprovechamos el RCE para enviarnos una **reverse shell** utilizando 
 ![RevShell](/assets/post_img/Express/9c-rcerevshell.png)
 ![RootFlag](/assets/post_img/Express/9d-flag.png)
 
-**Gracias por haber llegado hasta al final, poquito a poquito vamos mejorando y adaptando los conceptos. ¡Un saludo a todos los que me apoyan desde LinkedIn, realmente me anima a seguir!**
+**Gracias por haber llegado hasta al final, poquito a poquito vamos mejorando y adaptando los conceptos. ¡Un saludo a todos los que me apoyan desde [LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7427368197202481153/), realmente me anima a seguir!**
 
 Hasta la próxima,
 
