@@ -46,65 +46,12 @@ Una vez identificado el objetivo, procedemos a realizar un escaneo exhaustivo de
 ```bash
 ┌──(kali㉿kali)-[~/CTF/Swamp]
 └─$ rustscan -a 10.0.5.22 --ulimit 5000 -- -sCV
-.----. .-. .-. .----..---.  .----. .---.   .--.  .-. .-.
-| {}  }| { } |{ {__ {_   _}{ {__  /  ___} / {} \ |  `| |
-| .-. \| {_} |.-._} } | |  .-._} }\     }/  /\  \| |\  |
-`-' `-'`-----'`----'  `-'  `----'  `---' `-'  `-'`-' `-'
-The Modern Day Port Scanner.
-________________________________________
-: http://discord.skerritt.blog         :
-: https://github.com/RustScan/RustScan :
- --------------------------------------
-RustScan: Where scanning meets swagging. 😎
 
 [~] The config file is expected to be at "/home/kali/.rustscan.toml"
 [~] Automatically increasing ulimit value to 5000.
 Open 10.0.5.22:22
 Open 10.0.5.22:53
 Open 10.0.5.22:80
-[~] Starting Script(s)
-[>] Running script "nmap -vvv -p {{port}} -{{ipversion}} {{ip}} -sCV" on ip 10.0.5.22
-Depending on the complexity of the script, results may take some time to appear.
-[~] Starting Nmap 7.95 ( https://nmap.org ) at 2026-01-27 19:00 CET
-NSE: Loaded 157 scripts for scanning.
-NSE: Script Pre-scanning.
-NSE: Starting runlevel 1 (of 3) scan.
-Initiating NSE at 19:00
-Completed NSE at 19:00, 0.00s elapsed
-NSE: Starting runlevel 2 (of 3) scan.
-Initiating NSE at 19:00
-Completed NSE at 19:00, 0.00s elapsed
-NSE: Starting runlevel 3 (of 3) scan.
-Initiating NSE at 19:00
-Completed NSE at 19:00, 0.00s elapsed
-Initiating ARP Ping Scan at 19:00
-Scanning 10.0.5.22 [1 port]
-Completed ARP Ping Scan at 19:00, 0.04s elapsed (1 total hosts)
-Initiating Parallel DNS resolution of 1 host. at 19:00
-Completed Parallel DNS resolution of 1 host. at 19:00, 0.01s elapsed
-DNS resolution of 1 IPs took 0.01s. Mode: Async [#: 1, OK: 0, NX: 1, DR: 0, SF: 0, TR: 1, CN: 0]
-Initiating SYN Stealth Scan at 19:00
-Scanning 10.0.5.22 [3 ports]
-Discovered open port 22/tcp on 10.0.5.22
-Discovered open port 80/tcp on 10.0.5.22
-Discovered open port 53/tcp on 10.0.5.22
-Completed SYN Stealth Scan at 19:00, 0.02s elapsed (3 total ports)
-Initiating Service scan at 19:00
-Scanning 3 services on 10.0.5.22
-Completed Service scan at 19:00, 6.03s elapsed (3 services on 1 host)
-NSE: Script scanning 10.0.5.22.
-NSE: Starting runlevel 1 (of 3) scan.
-Initiating NSE at 19:00
-Completed NSE at 19:00, 8.09s elapsed
-NSE: Starting runlevel 2 (of 3) scan.
-Initiating NSE at 19:00
-Completed NSE at 19:00, 0.02s elapsed
-NSE: Starting runlevel 3 (of 3) scan.
-Initiating NSE at 19:00
-Completed NSE at 19:00, 0.00s elapsed
-Nmap scan report for 10.0.5.22
-Host is up, received arp-response (0.00048s latency).
-Scanned at 2026-01-27 19:00:15 CET for 15s
 
 PORT   STATE SERVICE REASON         VERSION
 22/tcp open  ssh     syn-ack ttl 64 OpenSSH 9.2p1 Debian 2+deb12u3 (protocol 2.0)
@@ -123,21 +70,6 @@ PORT   STATE SERVICE REASON         VERSION
 |_http-title: Did not follow redirect to http://swamp.nyx
 MAC Address: 08:00:27:B8:8B:4B (PCS Systemtechnik/Oracle VirtualBox virtual NIC)
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
-
-NSE: Script Post-scanning.
-NSE: Starting runlevel 1 (of 3) scan.
-Initiating NSE at 19:00
-Completed NSE at 19:00, 0.00s elapsed
-NSE: Starting runlevel 2 (of 3) scan.
-Initiating NSE at 19:00
-Completed NSE at 19:00, 0.00s elapsed
-NSE: Starting runlevel 3 (of 3) scan.
-Initiating NSE at 19:00
-Completed NSE at 19:00, 0.00s elapsed
-Read data files from: /usr/share/nmap
-Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-Nmap done: 1 IP address (1 host up) scanned in 14.47 seconds
-           Raw packets sent: 4 (160B) | Rcvd: 4 (160B)
 ```
 
 Del escaneo destacamos:
