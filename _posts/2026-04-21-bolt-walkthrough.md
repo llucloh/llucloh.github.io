@@ -14,6 +14,7 @@ Podemos ver los siguientes servicios detectados:
 - SSH (22) → OpenSSH 7.6p1
 - HTTP (80) → Apache 2.4.29 (página por defecto)
 - HTTP (8000) → Servicio web con PHP (Bolt CMS)
+
 ```bash
 ❯ ping -c 4 10.130.178.150
 PING 10.130.178.150 (10.130.178.150) 56(84) bytes of data.
