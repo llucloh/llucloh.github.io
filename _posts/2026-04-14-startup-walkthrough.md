@@ -1,6 +1,6 @@
 ---
 title : "Startup CTF Walkthrough by loh"
-date: 2026-02-11 02:36:14 +0200
+date: 2026-04-14 02:36:14 +0200
 categories: [CTF Walkthrough]
 tags: [Easy, THM, Linux, FTP-Anonymous, FTP-Writable, File-Upload, RCE, Web-Exposure, Reverse-Shell, PCAP-Analysis, Credential-Leak, Lateral-Movement, Privilege-Escalation, Cronjob-Abuse, SUID]
 ---
